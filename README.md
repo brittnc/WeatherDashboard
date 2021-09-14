@@ -5,10 +5,15 @@
 
 <br />
 <br />
-<br />
-
-## Screenshot Of Deployed Page
-![click here!] ()
 
 ## Link to Deployed Page
+![click here!](https://brittnc.github.io/WeatherDashboard/)
+
+<br />
+
+## Screenshots Of Deployed Page
+![Full Webpage on live view](assets/one.png)
+![Full Webpage on live view](assets/two.png)
+![Full Webpage on live view](assets/three.png)
+
 

@@ -35,10 +35,13 @@ function createCityList(citySearchList) {
   
     $.ajax({
       url: queryURL,
+      method: "GET"
     })
-      // Stores all data for weather
+      // stores all data for weather
       .then(function(weather) {
- 
+        // Logs the queryURL
+        console.log(queryURL);
+  
         // Logs the results
         console.log(weather);
   
@@ -58,6 +61,8 @@ function createCityList(citySearchList) {
           "src",
           "https://openweathermap.org/img/w/" + weather.weather[0].icon + ".png"
         );
+        $("#current-icon").empty();
+        $("#current-icon").append(weatherIcon);
   
         $("#current-temp").text("Temperature: " + weather.main.temp + " °F");
         $("#current-humidity").text("Humidity: " + weather.main.humidity + "%");
@@ -120,6 +125,8 @@ function createCityList(citySearchList) {
               $("#forecast-icon" + forecastPosition).empty();
               $("#forecast-icon" + forecastPosition).append(forecastIcon);
   
+              console.log(forecast.list[i].weather[0].icon);
+  
               $("#forecast-temp" + forecastPosition).text(
                 "Temp: " + forecast.list[i].main.temp + " °F"
               );
@@ -161,7 +168,8 @@ function createCityList(citySearchList) {
         .toLowerCase();
   
       if (city != "") {
-        //checks for entry 
+    //checks for entry 
+      
         citySearchList[city] = true;
       localStorage.setItem("citySearchList", JSON.stringify(citySearchList));
   
@@ -181,6 +189,6 @@ function createCityList(citySearchList) {
       populateCityWeather(city, citySearchList);
   
       $("#current-weather").show();
-
+      $("#forecast-weather").show();
     });
   });
