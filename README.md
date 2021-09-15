@@ -9,7 +9,7 @@
 <br />
 
 ## Link to Deployed Page
-![click here!](https://brittnc.github.io/WeatherDashboard/)
+[Click Me!](https://brittnc.github.io/WeatherDashboard/)
 
 <br />
 
